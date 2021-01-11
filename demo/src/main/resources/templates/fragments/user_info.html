@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="row">
+    <div class="col-md-8" style="margin:0 auto;">
+        <div class="card" th:object="${user}">
+            <div class="card-body">
+                <h2 class="card-title text-center">Basic information</h2>
+                <label th:text="'Name: ' + ${user.name}"></label></br>
+                <label th:text="'Last name: ' + ${user.lastName}"></label></br>
+                <label th:text="'Email: ' + ${user.email}"></label></br>
+                <label th:text="'City: ' + ${user.city}"></label></br>
+                <label th:text="'Phone: ' + ${user.phone}"></label></br>
+                <label th:text="'GitHub: ' + ${user.github}"></label></br>
+                <label th:text="'Linkedin: ' + ${user.linkedin}"></label></br>
+                <label th:text="'Skype: ' + ${user.skype}"></label></br>
+                <label th:text="'About: ' + ${user.about}"></label></br>
+            </div>
+            <div class="col text-center">
+                <a class="btn btn-info mr-2 editInfo" data-toggle="modal"
+                   data-target="#editPersonalInfo">Edit
+                    Personal Info</a>
+            </div>
+        </div>
+        <!--- Modal -->
+        <form method="post" th:action="@{/admin/edit-user/}" th:object="${user}">
+            <div class="modal fade" id="editPersonalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Info</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" class="form-control" id="name" th:field="${user.name}">
+                            </div>
+                            <div class="form-group">
+                                <label>Your LastName</label>
+                                <input type="text" class="form-control" id="lastName" th:field="${user.lastName}">
+                            </div>
+                            <div class="form-group">
+                                <label>Your E-mail</label>
+                                <input type="text" class="form-control" id="email" th:field="${user.email}">
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" class="form-control" id="city" th:field="${user.city}">
+                            </div>
+                            <div class="form-group">
+                                <label>Your Phone</label>
+                                <input type="text" class="form-control" id="phone" th:field="${user.phone}">
+                            </div>
+                            <div class="form-group">
+                                <label>GitHub: </label>
+                                <input type="text" class="form-control" id="gitHub" th:field="${user.github}">
+                            </div>
+                            <div class="form-group">
+                                <label>Linkedin:</label>
+                                <input type="text" class="form-control" id="linkedin" th:field="${user.linkedin}">
+                            </div>
+                            <div class="form-group">
+                                <label>Skype: </label>
+                                <input type="text" class="form-control" id="skype" th:field="${user.skype}">
+                            </div>
+                            <div class="form-group">
+                                <label> About</label>
+                                <textarea class="form-control" rows="5" id="about" th:field="${user.about}"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="save"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
