@@ -32,10 +32,10 @@ public class User {
     @OrderBy
     protected Set<School> schools = new HashSet<>();
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "user_id")
-    @OrderBy
-    protected Set<Work> works = new HashSet<>();
+//    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+//    @JoinColumn(name = "user_id")
+//    @OrderBy
+//    protected Set<Work> works = new HashSet<>();
 
     public User() {
     }
