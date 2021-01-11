@@ -15,11 +15,11 @@ public class TestHerokuApplication {
 		SpringApplication.run(TestHerokuApplication.class, args);
 	}
 
-	@Bean
-	ApplicationRunner applicationRunner(UserRepository userRepository){
-		return args -> {
-			userRepository.save(new User("Lukasz", "Kusa"));
-		};
-	}
+//	@Bean
+//	ApplicationRunner applicationRunner(UserRepository userRepository){
+//		return args -> {
+//			userRepository.save(new User("Lukasz", "Kusa"));
+//		};
+//	}
 
 }
