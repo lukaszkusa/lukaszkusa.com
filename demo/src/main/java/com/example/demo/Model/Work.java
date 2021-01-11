@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 public class Work {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     protected String position;
@@ -24,8 +24,8 @@ public class Work {
     public Work() {
     }
 
-    @ElementCollection
-    @BatchSize(size = 10)
-    protected Set<String>responsibilities = new HashSet<>();
+//    @ElementCollection
+//    @BatchSize(size = 10)
+//    protected Set<String>responsibilities = new HashSet<>();
 
 }
