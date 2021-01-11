@@ -29,7 +29,7 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "user_id")
     @OrderBy
-    protected Set schools = new HashSet<School>();
+    protected Set<School> schools = new HashSet<>();
 
     public User() {
     }
