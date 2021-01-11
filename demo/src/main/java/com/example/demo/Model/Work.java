@@ -24,8 +24,8 @@ public class Work {
     public Work() {
     }
 
-        @ElementCollection
+    @ElementCollection
     @BatchSize(size = 10)
-    protected Set<String>responsibilities = new HashSet<>();
+    protected Set<String> responsibilities = new HashSet<>();
 
 }
