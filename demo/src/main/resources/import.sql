@@ -8,7 +8,7 @@ insert into WORK_RESPONSIBILITIES(work_id, RESPONSIBILITIES)values(1, 'Creation 
 insert into WORK_RESPONSIBILITIES(work_id, RESPONSIBILITIES)values(1, 'Analyse requirements or created applications ');
 insert into WORK_RESPONSIBILITIES(work_id, RESPONSIBILITIES)values(1, 'Building application based on the UNITY engine');
 insert into WORK_RESPONSIBILITIES(work_id, RESPONSIBILITIES)values(1, 'Develop and maintain software solutions');
-insert into work(id, position, company, city, start_date, start_end, user_id )values(1, 'PRODUCTION WORKER','ABB INDUSTRIAL SOLUTIONS', 'KLODZKO', '10.2018', 'UNTIL-NOW', 1);
+insert into work(id, position, company, city, start_date, start_end, user_id )values(2, 'PRODUCTION WORKER','ABB INDUSTRIAL SOLUTIONS', 'KLODZKO', '10.2018', 'UNTIL-NOW', 1);
 insert into WORK_RESPONSIBILITIES(work_id, RESPONSIBILITIES)values(2, 'Programming of plc controllers: Siemens, Omron');
 insert into WORK_RESPONSIBILITIES(work_id, RESPONSIBILITIES)values(2, 'Creating electrical and pneumatic diagrams,');
 insert into WORK_RESPONSIBILITIES(work_id, RESPONSIBILITIES)values(2, 'Creating databases for printing and marking systems,');
