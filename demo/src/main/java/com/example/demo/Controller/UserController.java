@@ -5,9 +5,7 @@ import com.example.demo.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequiredArgsConstructor
@@ -22,5 +20,20 @@ public class UserController {
         model.addAttribute("user", u);
 
         return "admin";
+    }
+    @PostMapping("/edit-user")
+    public String editUser(@ModelAttribute("user") User user) {
+        User u = userRepository.getOne(1L);
+        u.setName(user.getName());
+        u.setLastName(user.getLastName());
+        u.setEmail(user.getEmail());
+        u.setCity(user.getCity());
+        u.setPhone(user.getPhone());
+        u.setAbout(user.getAbout());
+        u.setGithub(user.getGithub());
+        u.setLinkedin(user.getLinkedin());
+        u.setSkype(user.getSkype());
+        userRepository.save(u);
+        return "redirect:/admin";
     }
 }

@@ -39,4 +39,7 @@ public class User {
     public User() {
     }
 
+    public void addSchool(School school) {
+        schools.add(school);
+    }
 }
