@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Entity
 public class School {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     protected String name;
