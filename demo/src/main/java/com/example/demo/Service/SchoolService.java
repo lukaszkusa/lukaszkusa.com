@@ -1,4 +1,4 @@
-package pl.kusa.portfolio.Service;
+package com.example.demo.Service;
 
 import com.example.demo.Model.School;
 import com.example.demo.Model.User;
