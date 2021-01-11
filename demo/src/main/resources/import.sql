@@ -2,3 +2,5 @@ insert into user( name, last_name, phone, city, email, github, linkedin, skype, 
 insert into school(name,speciality, direction, diploma_work, degree, start_date, end_date, user_id) values('WROCLAW SCHOOL OF INFORMATION TECHNOLOGY "HORYZONT" ', 'Computer Networks', 'IT', '"Analysis of selected aspects of TLS protocol security"','Master', '10.2017', '09.2020', 1);
 insert into school(name,speciality, direction, diploma_work, degree, start_date, end_date, user_id) values('WROCLAW SCHOOL OF INFORMATION TECHNOLOGY "HORYZONT" ', 'Cryptography', 'IT', '"Hardware encryption using Raspberry-Pi"','Engineer', '10.2013', '02.2018', 1);
 insert into school(name, direction, degree, start_date, end_date, user_id) values('IT TECHNICAL SCHOOL, KLODZKO ', 'IT' ,'TECHNICIAN', '09.2009', '06.2013', 1);
+insert into work(position, company, city, start_date, start_end, user_id)values('Software Developer','4D MARINE LEARNING - STARTUP', 'REMOTE', '07.2019', 'UNTIL-NOW', 1);
+insert into work(position, company, city, start_date, start_end, user_id )values('PRODUCTION WORKER','ABB INDUSTRIAL SOLUTIONS', 'KLODZKO', '10.2018', 'UNTIL-NOW', 1);
