@@ -2,12 +2,15 @@ package com.example.demo.Model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Data
 @Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     protected String name;
     protected String lastName;
     protected String email;
