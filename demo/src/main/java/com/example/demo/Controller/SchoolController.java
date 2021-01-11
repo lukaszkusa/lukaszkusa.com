@@ -17,7 +17,7 @@ public class SchoolController {
     }
 
 
-    @PutMapping("/edit-school/{id}")
+    @PostMapping("/edit-school/{id}")
     public String editSchool(@PathVariable("id") long id, School school) {
         schoolService.update(id, school);
         return "redirect:/admin";

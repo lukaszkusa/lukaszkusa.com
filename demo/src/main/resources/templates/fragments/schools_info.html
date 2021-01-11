@@ -21,7 +21,7 @@
                         <a type="submit" th:href="@{/admin/delete-school/{id}(id=${school.id})}" class="btn btn-danger mr-2 ">Delete</a>
 
                     </div>
-                    <form th:method="put" th:action="@{/admin/edit-school/{id}(id=${school.id})}" object="school_edit">
+                    <form method="post" th:action="@{/admin/edit-school/{id}(id=${school.id})}" object="school_edit">
                         <div class="modal fade" th:id="'school' + *{school.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                              aria-hidden="true">
                             <div class="modal-dialog" role="document">
