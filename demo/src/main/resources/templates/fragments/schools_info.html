@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-8" style="margin:0 auto;">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center">Schools Info</h2>
+                <div th:each="school: ${user.schools}">
+                    <p th:text="*{school.name}"></p>
+                    <p th:text="*{school.degree} + ' of ' + *{school.direction}+ ', ' + *{school.speciality}"></p>
+                    <p th:if="*{school.diplomaWork} != null" th:text="*{school.diplomaWork}"></p>
+                    <p th:text="*{school.startDate} + ' - ' + *{school.endDate}"></p>
+                    <div class="col text-right">
+                        <a class="btn btn-info mr-2" data-toggle="modal"
+                           th:data-target="'#school' + *{school.id}">Edit</a>
+                        <a type="submit" th:href="@{/admin/delete-school/{id}(id=${school.id})}" class="btn btn-danger mr-2 ">Delete</a>
+
+                    </div>
+                    <form th:method="put" th:action="@{/admin/edit-school/{id}(id=${school.id})}" object="school_edit">
+                        <div class="modal fade" th:id="'school' + *{school.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Info</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="name">School name: </label>
+                                            <input type="text" class="form-control" id="name" name="name" th:value="*{school.name}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="degree">Degree: </label>
+                                            <input type="text" class="form-control" name="degree" id="degree" th:value="*{school.degree}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="direction">Direction: </label>
+                                            <input type="text" class="form-control" id="direction" name="direction" th:value="*{school.direction}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="speciality">Speciality: </label>
+                                            <input type="text" class="form-control" id="speciality" name="speciality" th:value="*{school.speciality}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="diplomaWork">DiplomaWork: </label>
+                                            <input type="text" class="form-control" id="diplomaWork" name="diplomaWork" th:value="*{school.diplomaWork}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="startDate">Start Date: </label>
+                                            <input type="text" class="form-control" id="startDate" name="startDate" th:value="*{school.startDate}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="endDate">End Date: </label>
+                                            <input type="text" class="form-control" id="endDate" name="endDate" th:value="*{school.endDate}"/>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" value="save">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col text-center">
+                    <a class="btn btn-success mr-2" data-toggle="modal" data-target="#addSchool"> + School</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<form method="post" th:action="@{/admin/school/{id}(id=${user.id})}" object="school">
+    <div class="modal fade" id="addSchool" tabindex="-1" role="dialog" aria-labelledby="exampleLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleLabel">Info</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">School name: </label>
+                        <input type="text" class="form-control" id="name" name="name" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">Degree: </label>
+                        <input type="text" class="form-control" name="degree" id="degree" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="direction">Direction: </label>
+                        <input type="text" class="form-control" id="direction" name="direction" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="speciality">Speciality: </label>
+                        <input type="text" class="form-control" id="speciality" name="speciality" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="diplomaWork">DiplomaWork: </label>
+                        <input type="text" class="form-control" id="diplomaWork" name="diplomaWork" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date: </label>
+                        <input type="text" class="form-control" id="startDate" name="startDate" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End Date: </label>
+                        <input type="text" class="form-control" id="endDate" name="endDate" value=""/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" value="save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
