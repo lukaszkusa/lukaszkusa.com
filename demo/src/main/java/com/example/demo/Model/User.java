@@ -42,4 +42,8 @@ public class User {
     public void addSchool(School school) {
         schools.add(school);
     }
+
+    public void addWork(Work work) {
+        works.add(work);
+    }
 }
