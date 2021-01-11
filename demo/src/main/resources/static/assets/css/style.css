@@ -1170,3 +1170,7 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+center{
+        align-items: center;
+        display: flex;
+}
