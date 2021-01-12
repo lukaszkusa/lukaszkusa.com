@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query("select u from User u" +
-            "left join fetch u.school" +
-            "left join fetch u.work" +
-            "where u.id = ?1")
-    public User findById(long id);
+            " left join fetch u.schools" +
+            " left join fetch u.works" +
+            " where u.id = ?1")
+    public User findUserById(long id);
 }
