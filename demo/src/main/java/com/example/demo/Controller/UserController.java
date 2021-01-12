@@ -22,7 +22,7 @@ public class UserController {
     @GetMapping
     public String getUser(Model model) {
 
-        User u = userRepository.getOne(1L);
+        User u = userRepository.findById(1L);
         model.addAttribute("user", u);
 
         return "admin";
