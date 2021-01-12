@@ -15,6 +15,11 @@
 <div class="container">
     <div class="main-panel" style="margin: 0 auto;">
         <div class="content-wrapper">
+            <div class="row" style="float: right;">
+                <form method="post" th:action="@{/logout}">
+                    <input type="submit" value="Log Out">
+                </form>
+            </div>
             <div th:insert="fragments/user_info">...</div>
             <div th:insert="fragments/schools_info"></div>
             <div th:insert="fragments/works_info"></div>
