@@ -260,6 +260,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 600px) {
   #hero {
   height: 50vh;
+  background-size: cover;
+    position: relative;
   }
 }
 #hero:before {
