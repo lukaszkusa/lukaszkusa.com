@@ -266,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 600px) {
   #hero:before {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
   }
 }
 #hero:before {
