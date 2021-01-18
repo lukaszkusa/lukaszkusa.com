@@ -550,7 +550,11 @@ section {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
-
+@media (max-width: 600px){
+    #portfolio{
+        display:none;
+    }
+}
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 25px auto;
