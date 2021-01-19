@@ -954,9 +954,14 @@ section {
 @media (max-width: 600px){
     .contact .info .email, .contact .info .phone {
         margin-top: 40px;
+        display:flex;
     }
 }
-
+@media(min-width: 900px){
+    .contact .info .address, .contact .info .email, .contact .info .phone{
+        width:33%;
+    }
+}
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
   background: #0563bb;
   color: #fff;
