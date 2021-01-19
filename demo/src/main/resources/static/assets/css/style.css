@@ -958,7 +958,7 @@ section {
 }
 @media(min-width: 900px){
     .contact .info .address, .contact .info .email, .contact .info .phone{
-        width:33%;
+        margin-right:20vh;
     }
 }
 @media(min-width: 900px){
