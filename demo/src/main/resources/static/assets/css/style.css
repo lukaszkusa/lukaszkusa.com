@@ -965,6 +965,8 @@ section {
     .contact .info{
      display:flex;
      justify-content: space-between;
+         margin-right: 20vh;
+         margin-left: 20vh;
     }
 }
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
