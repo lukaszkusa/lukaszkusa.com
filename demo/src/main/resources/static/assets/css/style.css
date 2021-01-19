@@ -957,11 +957,6 @@ section {
     }
 }
 @media(min-width: 900px){
-    .contact .info .address, .contact .info .email, .contact .info .phone{
-        margin-right:20vh;
-    }
-}
-@media(min-width: 900px){
     .contact .info{
      display:flex;
      justify-content: space-between;
