@@ -964,6 +964,7 @@ section {
 @media(min-width: 900px){
     .contact .info{
      display:flex;
+     justify-content: space-between;
     }
 }
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
