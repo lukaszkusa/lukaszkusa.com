@@ -337,6 +337,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 section {
   padding: 20px 0;
+  padding-bottom:30px;
   overflow: hidden;
 }
 
@@ -458,11 +459,11 @@ section {
 }
 
 .skills .progress .skill {
-  padding: 10px 0;
+  padding: 20px 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
   display: block;
-  font-weight: 600;
+  font-weight: 900;
   font-family: "Poppins", sans-serif;
   color: #45505b;
 }
