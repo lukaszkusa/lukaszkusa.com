@@ -4,7 +4,9 @@ import lombok.Data;
 import org.hibernate.annotations.BatchSize;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -26,6 +28,6 @@ public class Work {
 
     @ElementCollection
     @BatchSize(size = 10)
-    protected Set<String> responsibilities = new HashSet<>();
+    protected List<String> responsibilities = new ArrayList<>();
 
 }

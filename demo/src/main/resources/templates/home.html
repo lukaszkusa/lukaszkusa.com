@@ -60,7 +60,7 @@
 <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <h1 th:text="${user.name + ' ' + user.lastName}"></h1>
-        <p>I'm <span class="typed" data-typed-items="Developer"></span></p>
+        <p>I'm <span class="typed" data-typed-items="Software Developer"></span></p>
         <div class="social-links">
             <a th:href="${user.github}" target="_blank" class="google-plus"><i class="bx bxl-github"></i></a>
             <a th:href="${user.linkedin}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
@@ -110,27 +110,6 @@
                     </div>
                     <div class="my-auto col-6 col-md-3 col-md-3-custom">
                         <div class="progress" style="height: inherit;">
-                            <img src="/assets/img/git.png" class="img-fluid" width="80" height="80"
-                                 style="max-height: 90px;width: auto;">
-                            <span class="skill" text="git"> GIT </span>
-                        </div>
-                    </div>
-                    <div class="my-auto col-6 col-md-3 col-md-3-custom">
-                        <div class="progress" style="height: inherit;">
-                            <img src="/assets/img/thymeleaf.png" class="img-fluid" width="80" height="80"
-                                 style="max-height: 90px;width: auto;">
-                            <span class="skill" text="thymeleaf"> THYMELEAF</span>
-                        </div>
-                    </div>
-                    <div class="my-auto col-6 col-md-3 col-md-3-custom">
-                        <div class="progress" style="height: inherit;">
-                            <img src="/assets/img/html5.png" class="img-fluid" width="80" height="80"
-                                 style="max-height: 90px;width: auto;">
-                            <span class="skill" text="html"> HTML/CSS</span>
-                        </div>
-                    </div>
-                    <div class="my-auto col-6 col-md-3 col-md-3-custom">
-                        <div class="progress" style="height: inherit;">
                             <img src="/assets/img/unity.PNG" class="img-fluid" width="80" height="80"
                                  style="max-height: 90px;width: auto;">
                             <span class="skill" text="css">UNITY</span>
@@ -138,9 +117,30 @@
                     </div>
                     <div class="my-auto col-6 col-md-3 col-md-3-custom">
                         <div class="progress" style="height: inherit;">
-                            <img src="/assets/img/sql.png" class="img-fluid" width="80" height="80"
+                            <img src="/assets/img/linux.png" class="img-fluid" width="80" height="80"
                                  style="max-height: 90px;width: auto;">
-                            <span class="skill" text="sql"> SQL </span>
+                            <span class="skill" text="thymeleaf"> LINUX</span>
+                        </div>
+                    </div>
+                    <div class="my-auto col-6 col-md-3 col-md-3-custom">
+                        <div class="progress" style="height: inherit;">
+                            <img src="/assets/img/IntelliJ.png" class="img-fluid" width="80" height="80"
+                                 style="max-height: 90px;width: auto;">
+                            <span class="skill" text="html"> IntelliJ</span>
+                        </div>
+                    </div>
+                    <div class="my-auto col-6 col-md-3 col-md-3-custom">
+                        <div class="progress" style="height: inherit;">
+                            <img src="/assets/img/git.png" class="img-fluid" width="80" height="80"
+                                 style="max-height: 90px;width: auto;">
+                            <span class="skill" text="git"> GIT HUB </span>
+                        </div>
+                    </div>
+                    <div class="my-auto col-6 col-md-3 col-md-3-custom">
+                        <div class="progress" style="height: inherit;">
+                            <img src="/assets/img/jira.png" class="img-fluid" width="80" height="80"
+                                 style="max-height: 90px;width: auto;">
+                            <span class="skill" text="sql"> JIRA </span>
                         </div>
                     </div>
                 </div>
@@ -192,9 +192,41 @@
             <div class="section-title">
                 <h2>Portfolio</h2>
             </div>
-            <div class="embed-responsive embed-responsive-16by9" style="position:unset;padding-bottom:15%">
-                <iframe src="https://4dmarinelearning.com/wp-content/uploads/2021/01/web/" allowfullscreen></iframe>
+            <iframe id="myFrame" src="https://4dmarinelearning.com/wp-content/uploads/2021/04/Wyscigi 2D/" height="600" width="900" style="border:0;padding:20px;display:block; margin:0 auto;"></iframe>
+            <div class="container" style="width:90%;">
+                <div class="row">
+                    <div class="col-6" style="padding-right: 0px;padding-left: 0px;">
+                        <input type="image" onclick="wyscigi()" src="https://4dmarinelearning.com/wp-content/uploads/2021/04/sample1.png" name="image" width="auto" height="280px" style="padding:10px">
+                        <input type="image" onclick="strzelanka()" src="https://4dmarinelearning.com/wp-content/uploads/2021/04/sample.png" name="image" width="auto" height="280px" style="padding:10px">
+                    </div>
+                    <!-- /.col-sm-6 -->
+                    <div class="col-6" style="padding-right: 0px;padding-left: 0px;">
+                        <input type="image" onclick="barka()" src="https://4dmarinelearning.com/wp-content/uploads/2021/04/logo.png" name="image" width="100%" height="auto" style="padding:10px">
+                    </div>
+                    <!-- /.col-sm-6 -->
+                </div>
+                <!-- /.row -->
             </div>
+            <!-- /.container -->
+            <script>
+function wyscigi() {
+  document.getElementById("myFrame").src = "https://4dmarinelearning.com/wp-content/uploads/2021/04/Wyscigi 2D/";
+  document.getElementById("myFrame").height = 600;
+  document.getElementById("myFrame").width = 900;
+}
+function strzelanka() {
+  document.getElementById("myFrame").src = "https://4dmarinelearning.com/wp-content/uploads/2021/04/Kosmiczna Strzelanka 3D/";
+  document.getElementById("myFrame").height = 750;
+    document.getElementById("myFrame").width = 600;
+}
+function barka() {
+  document.getElementById("myFrame").src = "https://4dmarinelearning.com/wp-content/uploads/2021/04/Procedura/";
+  document.getElementById("myFrame").height = 600;
+    document.getElementById("myFrame").width = 900;
+}
+
+
+            </script>
 
         </div>
     </section><!-- End Portfolio Section -->
@@ -246,9 +278,6 @@
             <a th:href="${user.github}" target="_blank" class="google-plus"><i class="bx bxl-github"></i></a>
             <a th:href="${user.linkedin}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             <a th:href="${user.skype}" target="_blank" class="linkedin"><i class="bx bxl-skype"></i></a>
-        </div>
-        <div class="copyright">
-            &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
