@@ -1,5 +1,5 @@
 # lukaszkusa.com
-Portfolio website in Spring, Hibernate, MySQL on Heroku platform
+Portfolio website in Spring, Hibernate
 
 You can view this website under http://www.lukaszkusa.com/
 
